@@ -1,0 +1,4 @@
+site_name: Python Cookbook with VS Code
+
+theme:
+  name: material 

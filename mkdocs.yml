@@ -2,4 +2,9 @@ site_name: Python Cookbook with VS Code
 
 theme:
   name: material 
+  palette:
+    scheme: slate
 
+nav:
+  - Home: index.md
+  - About Python: pythonRef.md

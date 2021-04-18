@@ -1,10 +1,56 @@
 site_name: Python Cookbook with VS Code
-
+copyright: Copyright &copy; <script>document.write(new Date().getFullYear())</script>
+ Pc NG
+  
 theme:
   name: material 
   palette:
     scheme: slate
+    primary: blue grey
+    accent: blue
+    icon: 
+      logo: cloud-tags
+    favicon: buffet
+    features:
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - navigation.expand
+      - navigation.top
+      - toc.integrate
+      - search.highlight
+
+google_analytics:
+  - UA-129545199-1
+  - auto
+
+markdown_extensions:
+  - meta
+  - abbr
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details 
+  - pymdownx.superfences
+  - attr_list
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# extra_css:
+#   - stylesheets/extra.css
 
 nav:
   - Home: index.md
   - About Python: pythonRef.md
+  - Setting Up Python with VS Code: 1. vscode-setup/vs_setup.md
+  

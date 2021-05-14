@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="todo">
+        <meta name="description" content="Manage packages with Virtual Environment">
       
       
         <meta name="keywords" content="Python, VS code, Cookbook, fun">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Virtualenv - Python Cookbook with VS Code</title>
+        <title>Creating Virtual Environment - Python Cookbook with VS Code</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#virtualenv" class="md-skip">
+        <a href="#creating-virtual-environment" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Virtualenv
+              Creating Virtual Environment
             
           </span>
         </div>
@@ -159,6 +159,8 @@
           
             
               
+                
+              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -199,34 +201,21 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../../pythonRef/" class="md-nav__link">
-        About Python
-      </a>
-    </li>
-  
-
     
-      
-      
-      
-
-  
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
-      <label class="md-nav__link" for="__nav_3">
+      <label class="md-nav__link" for="__nav_2">
         Python with VS Code
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Python with VS Code" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
+        <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Python with VS Code
         </label>
@@ -247,11 +236,51 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../vs_setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Virtual Environment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Virtual Environment
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    Note
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -270,13 +299,17 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -286,8 +319,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#virtualenv" class="md-nav__link">
-    Virtualenv
+  <a href="#note" class="md-nav__link">
+    Note
   </a>
   
 </li>
@@ -305,23 +338,43 @@
               
                 
                 
-                  <h1>Virtualenv</h1>
-                
-                <h2 id="virtualenv">Virtualenv</h2>
-<p>Virtualen is a virtual Python environment builder.
-It helps a user to create multiple Python environments side-by-side.
-Thereby, it can avoid compatibility issues between the different versions of the libraries.</p>
-<p>to install virtualenv</p>
+                <h1 id="creating-virtual-environment">Creating Virtual Environment</h1>
+<p>It is always recommended to install the Python packages inside the Virtual Environment rather than installing them inside the global environment. 
+Virtual Environment, works as a virtual Python environment builder, allows us to create multiple Python environments indepdendently.
+With Virtual Environment, any packages we installed will only work when that particular environment is activated. 
+So, same package with different versions installed in different Virtual Environment will not interfere with each other. 
+In other words, we can avoid compatibility issues between different versions with Virtual Environment.</p>
+<p>Below are some basic steps in creating a virtual environment: (Note that these commands are only work with windows machine)</p>
+<p><strong>STEP 1</strong>: Fire up the PowerShell terminal, and use the <code>venv</code> command to create a virtual environment. Suppose that we would like to create a virtual environment with name <code>env-1</code>, we can type in the following command</p>
+<pre><code>python -m venv env-1
+</code></pre>
+<p>After executing this command, you can see a folder env-1 is created in your explorer (at the left panel).</p>
+<blockquote>
+<p><img alt="create" src="create.JPG" /></p>
+</blockquote>
+<p><strong>STEP 2</strong>: Activate the virtual environment <code>env-1</code> with the following command</p>
+<pre><code>env-1\Scripts\activate
+</code></pre>
+<p>You can see that now <code>env-1</code> is activated.</p>
+<blockquote>
+<p><img alt="create" src="activate.JPG" /></p>
+</blockquote>
+<p><strong>STEP 3</strong>: Now, we can install our preferred Python packages inside the virtual environment <code>env-1</code>. To install <code>numpy</code>, one can use the <code>pip</code> command</p>
+<pre><code>pip install matplotlib
+</code></pre>
+<p><strong>STEP 4</strong>: To deactivate the virtual environment, simply type </p>
+<pre><code>deactivate
+</code></pre>
+<hr />
+<h2 id="note">Note</h2>
+<p>If the virtual environment is not come with the installed Python, we need to first install the virtual environment. Type the following to install <code>virtualenv</code></p>
 <pre><code>pip install virtualenv
 </code></pre>
-<p>a new virtual environment can be created as follows</p>
-<pre><code>virtualenv venv
+<p>For Linux or Mac users, you can activate the environment with the following command:</p>
+<pre><code>Linux/Mac: source venv/bin/activate
 </code></pre>
-<p>To activate the environment:</p>
-<pre><code>Linux/Mac: venv/bin/activate
-
-Windows: venv\Scripts\activate
-</code></pre>
+                
+                  
                 
               
               
@@ -337,6 +390,25 @@ Windows: venv\Scripts\activate
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../vscode/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Visual Studio Code
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

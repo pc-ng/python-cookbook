@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="all time favorite code editor">
+      
       
         <meta name="keywords" content="Python, VS code, Cookbook, fun">
       
@@ -18,7 +20,7 @@
     
     
       
-        <title>Virtualenv - Python Cookbook with VS Code</title>
+        <title>Visual Studio Code - Python Cookbook with VS Code</title>
       
     
     
@@ -71,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#virtualenv" class="md-skip">
+        <a href="#visual-studio-code" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Virtualenv
+              Visual Studio Code
             
           </span>
         </div>
@@ -153,6 +155,8 @@
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -209,12 +213,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         Python with VS Code
@@ -230,11 +236,51 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../vscode/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Visual Studio Code
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Visual Studio Code
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#some-notes" class="md-nav__link">
+    Some Notes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -265,13 +311,17 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -281,8 +331,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#virtualenv" class="md-nav__link">
-    Virtualenv
+  <a href="#some-notes" class="md-nav__link">
+    Some Notes
   </a>
   
 </li>
@@ -300,23 +350,34 @@
               
                 
                 
-                  <h1>Virtualenv</h1>
-                
-                <h2 id="virtualenv">Virtualenv</h2>
-<p>Virtualen is a virtual Python environment builder.
-It helps a user to create multiple Python environments side-by-side.
-Thereby, it can avoid compatibility issues between the different versions of the libraries.</p>
-<p>to install virtualenv</p>
-<pre><code>pip install virtualenv
+                <h1 id="visual-studio-code">Visual Studio Code</h1>
+<p>Visual Studio Code (VS Code) is currently my all time favorite code editor. It is lightweight and has built-in support for JavaScript, TypeScript and Node.js. It also support additional programming language like Python. </p>
+<p>You can learn more about VS Code <a href="https://code.visualstudio.com/docs/introvideos/overview">here</a>.
+If you would like to use VS Code for your Python development, first download and install the VS Code from this <a href="https://code.visualstudio.com/">link</a>. </p>
+<p>After setting up VS Code, go to the <code>Extension</code>, then download and install the Python extension for VS Code
+You can found the <code>Extension</code> icon on the left panel of VS Code.</p>
+<blockquote>
+<p><img alt="JPG" src="{{ site.url }}/1.%20vscode-setup/images/1.extension.JPG" /></p>
+</blockquote>
+<h2 id="some-notes">Some Notes</h2>
+<p>Nowadays, many computers already have Python installed.
+To check the version of Python installed in your computer, type the following command in your <code>PowerShell</code> or <code>CMD</code>:</p>
+<pre><code>C:\Users\Your Name&gt; python --version
 </code></pre>
-<p>a new virtual environment can be created as follows</p>
-<pre><code>virtualenv venv
-</code></pre>
-<p>To activate the environment:</p>
-<pre><code>Linux/Mac: venv/bin/activate
+<p>Besides code editor like VS Code or Notepad++, we can also use an <abbr title="Integrated Development Environment">IDE</abbr>, such as <a href="https://thonny.org/">Thonny</a>, <a href="https://www.jetbrains.com/pycharm/">Pycharm</a>, <a href="https://netbeans.apache.org/[">Netbeans</a> or <a href="https://www.eclipse.org/downloads/">Eclipse</a> to write our Python code. These IDEs are useful when dealing with large collections of Python files.</p>
+<!-- # Python Install
 
-Windows: venv\Scripts\activate
-</code></pre>
+Many PCs and Macs will have python already installed.
+
+To check if you have python installed on a Windows PC, search in the start bar for Python or run the following on the Command Line (cmd.exe):
+
+C:\Users\Your Name>python --version
+To check if you have python installed on a Linux or Mac, then on linux open the command line or on Mac open the Terminal and type:
+
+python --version
+If you find that you do not have python installed on your computer, then you can download it for free from the following website: https://www.python.org/ -->
+                
+                  
                 
               
               
@@ -332,6 +393,39 @@ Windows: venv\Scripts\activate
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../../pythonRef/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              About Python
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../vs_setup/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Virtual Environment
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
